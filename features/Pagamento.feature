@@ -8,3 +8,10 @@ E o pedido está com status “aguardando pagamento”
 E existe um cupom “DESCE20” que oferece “20%” de desconto dentro do prazo de validade
 Quando o cliente insere o cupom “DESCE20” na tela de pagamento
 Então o valor final da compra é atualizado para “80,00
+
+Feature: Realizar estorno de saldo ao cancelar pedido
+Dado que existe um pedido com ID “PEDIDO123” e valor total de “100,00”
+E o pedido está com status “pago”
+Quando o cliente solicita cancelamento do pedido antes do restaurante aceitar
+Então o status do pedido deve ser atualizado para “Cancelado”
+E o valor “100,00” do pedido deve estar disponível no saldo do cliente no sistema
