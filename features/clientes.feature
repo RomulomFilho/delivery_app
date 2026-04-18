@@ -1,4 +1,4 @@
-Feature: Gerenciamento de clientes
+Feature: clientes
 
   Como um usuário do sistema de delivery
   Eu quero gerenciar os clientes cadastrados
